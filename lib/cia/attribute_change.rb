@@ -2,7 +2,6 @@ require "json"
 
 module CIA
   class AttributeChange < ActiveRecord::Base
-    include SourceValidation
     self.table_name = "cia_attribute_changes"
 
     belongs_to :event, foreign_key: "cia_event_id", inverse_of: :attribute_changes

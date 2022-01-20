@@ -1,6 +1,5 @@
 module CIA
   class Event < ActiveRecord::Base
-    include SourceValidation
     self.table_name = "cia_events"
 
     belongs_to :actor, polymorphic: true
